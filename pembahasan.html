@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Pembahasan</title>
+
+<script src="site_libs/header-attrs-2.7/header-attrs.js"></script>
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+
+<style type="text/css">
+  code {
+    white-space: pre;
+  }
+  .sourceCode {
+    overflow: visible;
+  }
+</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  background-color: #f8f8f8; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ef2929; } /* Alert */
+code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #c4a000; } /* Attribute */
+code span.bn { color: #0000cf; } /* BaseN */
+code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4e9a06; } /* Char */
+code span.cn { color: #000000; } /* Constant */
+code span.co { color: #8f5902; font-style: italic; } /* Comment */
+code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code span.dt { color: #204a87; } /* DataType */
+code span.dv { color: #0000cf; } /* DecVal */
+code span.er { color: #a40000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #0000cf; } /* Float */
+code span.fu { color: #000000; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code span.ot { color: #8f5902; } /* Other */
+code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code span.sc { color: #000000; } /* SpecialChar */
+code span.ss { color: #4e9a06; } /* SpecialString */
+code span.st { color: #4e9a06; } /* String */
+code span.va { color: #000000; } /* Variable */
+code span.vs { color: #4e9a06; } /* VerbatimString */
+code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+
+</style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    for (var j = 0; j < rules.length; j++) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") continue;
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' && rule.style.backgroundColor === '') continue;
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
+</script>
+
+
+
+
+<link rel="stylesheet" href="corp-styles.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-sm-12 col-md-4 col-lg-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-sm-12 col-md-8 col-lg-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Tegar NH</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="index.html">
+    <span class="fas fa-home"></span>
+     
+    Home
+  </a>
+</li>
+<li>
+  <a href="pembahasan.html">
+    <span class="fas fa-book"></span>
+     
+    Pembahasan
+  </a>
+</li>
+<li>
+  <a href="about.html">
+    <span class="fas fa-address-card"></span>
+     
+    About
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore"><span style="font-size:125%; font-family:Poppins; font-style:normal">Pembahasan</span></h1>
+
+</div>
+
+
+<div id="instalasi-package" class="section level1">
+<h1>Instalasi Package</h1>
+<p>Langkah pertama adalah menginstall package BiocManager terlebih dahulu</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">requireNamespace</span>(<span class="st">&quot;BiocManager&quot;</span>, <span class="at">quietly =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">install.packages</span>(<span class="st">&quot;BiocManager&quot;</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>BiocManager<span class="sc">::</span><span class="fu">install</span>(<span class="st">&quot;EBImage&quot;</span>)</span></code></pre></div>
+<pre><code>## Bioconductor version 3.12 (BiocManager 1.30.10), R 4.0.3 (2020-10-10)</code></pre>
+<pre><code>## Installing package(s) &#39;EBImage&#39;</code></pre>
+<pre><code>## package &#39;EBImage&#39; successfully unpacked and MD5 sums checked
+## 
+## The downloaded binary packages are in
+##  C:\Users\Tgar\AppData\Local\Temp\RtmpWwZ98C\downloaded_packages</code></pre>
+<pre><code>## Old packages: &#39;Matrix&#39;, &#39;xfun&#39;</code></pre>
+</div>
+<div id="pendahuluan" class="section level1">
+<h1>Pendahuluan</h1>
+<div id="menentukan-lokasi-kerja" class="section level2">
+<h2>Menentukan lokasi Kerja</h2>
+<p>Pilih lokasi yang ingin digunakan untuk menampilkan gambar</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">&quot;D:/RSTUDio/ebimagee&quot;</span>)</span></code></pre></div>
+</div>
+<div id="memanggil-library-ebimage" class="section level2">
+<h2>Memanggil Library EBImage</h2>
+<p>Kita panggil Library EBImage untuk menampilkan gambar</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(EBImage)</span></code></pre></div>
+</div>
+<div id="membaca-gambar" class="section level2">
+<h2>Membaca Gambar</h2>
+<p>Gunakan perintah readImage(‘nama gambar’) untuk membaca gambar yang ingin ditampilkan.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>Image <span class="ot">&lt;-</span> <span class="fu">readImage</span>(<span class="st">&#39;kabah.JPG&#39;</span>)</span></code></pre></div>
+</div>
+</div>
+<div id="menampilkan" class="section level1">
+<h1>Menampilkan</h1>
+<div id="menampilkan-gambar" class="section level2">
+<h2>Menampilkan Gambar</h2>
+<p>gunakan display(Image) untuk menampilkan gambar yang sudah dipilih</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">display</span>(Image)</span></code></pre></div>
+<p><img src="pembahasan_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+</div>
+<div id="sifat-gambar" class="section level2">
+<h2>Sifat Gambar</h2>
+<p>gunakan print(Image) untuk menampilkan sifat gambar berupa matriks yang sudah dipilih</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(Image)</span></code></pre></div>
+<pre><code>## Image 
+##   colorMode    : Color 
+##   storage.mode : double 
+##   dim          : 1000 1250 3 
+##   frames.total : 3 
+##   frames.render: 1 
+## 
+## imageData(object)[1:5,1:6,1]
+##           [,1]      [,2]      [,3]      [,4]      [,5]      [,6]
+## [1,] 0.8901961 0.8901961 0.8901961 0.8901961 0.8901961 0.8901961
+## [2,] 0.8901961 0.8901961 0.8901961 0.8901961 0.8901961 0.8901961
+## [3,] 0.8901961 0.8901961 0.8901961 0.8901961 0.8901961 0.8901961
+## [4,] 0.8901961 0.8901961 0.8901961 0.8901961 0.8901961 0.8901961
+## [5,] 0.8901961 0.8901961 0.8901961 0.8901961 0.8901961 0.8901961</code></pre>
+</div>
+<div id="histogram-gambar" class="section level2">
+<h2>Histogram Gambar</h2>
+<p>gunakan hist(Image) untuk mengetahui Histogram dari gambar yang kita pilih</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(Image)</span></code></pre></div>
+<p><img src="pembahasan_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+</div>
+</div>
+<div id="mengatur-gambar" class="section level1">
+<h1>Mengatur Gambar</h1>
+<div id="kecerahan" class="section level2">
+<h2>Kecerahan</h2>
+<p>simbol (+) : untuk mencerahkan. <br> simbol(-) : untuk mengurangi kecerahan.<br> Percobaan kali ini akan menambahkan 0.2 dan mengurangi 0.2 untuk intensitasnya.<br> Plot berfungsi untuk menampilkan kedua gambar tersebut.</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>Image1 <span class="ot">&lt;-</span> Image <span class="sc">+</span> <span class="fl">0.2</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>Image2 <span class="ot">&lt;-</span> Image <span class="sc">-</span> <span class="fl">0.2</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>))</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Image1)</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Image2)</span></code></pre></div>
+<p><img src="pembahasan_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+</div>
+<div id="penyesuaian-kontras" class="section level2">
+<h2>Penyesuaian Kontras</h2>
+<p><strong>Penyesuaian Kontras</strong> berfungsi untuk menyesuaikan gradasi untuk bagian terang dan bagian gelap dari keseluruhan gambar<br> gunakan perkalian (jika mengkali dengan angka dibawah 1 maka akan menggelapkan gambar).</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>Image3 <span class="ot">&lt;-</span> Image <span class="sc">*</span> <span class="fl">0.2</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>Image4 <span class="ot">&lt;-</span> Image <span class="sc">*</span> <span class="dv">2</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>))</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Image3)</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Image4)</span></code></pre></div>
+<p><img src="pembahasan_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+</div>
+<div id="koreksi-gamma" class="section level2">
+<h2>Koreksi Gamma</h2>
+<p><strong>Koreksi Gamma</strong> berfungsi untuk mengatur pencahayaan yang ada didalam gambar agar mengimbangi sistem pengelihatan mata manusia.<br> gunakan simbol pangkat (^) untuk menganturnya (semakin besar angka maka semakin gelap)</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>Image5 <span class="ot">&lt;-</span> Image <span class="sc">^</span> <span class="dv">2</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>Image6 <span class="ot">&lt;-</span> Image <span class="sc">^</span> <span class="fl">0.5</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>))</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Image5)</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(Image6)</span></code></pre></div>
+<p><img src="pembahasan_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+</div>
+<div id="memotong-gambar" class="section level2">
+<h2>Memotong Gambar</h2>
+<p>Kode dibawah ini digunakan untuk memotong gambar. Ukuran gambar yang digunakan saat ini adalah 1000 X 1250, maka tidak boleh melebihi angka jika ingin memotong gambarnya.</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">display</span>(Image[<span class="dv">350</span><span class="sc">:</span><span class="dv">900</span>, <span class="dv">250</span><span class="sc">:</span><span class="dv">900</span>,])</span></code></pre></div>
+<p><img src="pembahasan_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+</div>
+<div id="transformasi-spasial" class="section level2">
+<h2>Transformasi Spasial</h2>
+<p><strong>Transformasi Spasial</strong> Berfungsi untuk memutar gambar berdasarkan posisi matrix gambar</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>Imagetr <span class="ot">&lt;-</span> <span class="fu">translate</span>(<span class="fu">rotate</span>(Image, <span class="dv">45</span>), <span class="fu">c</span>(<span class="dv">50</span>, <span class="dv">0</span>))</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">display</span>(Imagetr)</span></code></pre></div>
+<p><img src="pembahasan_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
+</div>
+<div id="pengaturan-warna" class="section level2">
+<h2>Pengaturan Warna</h2>
+</div>
+<div id="section" class="section level2 tabset">
+<h2 class="tabset"></h2>
+<div id="grayscale" class="section level3">
+<h3>Grayscale</h3>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colorMode</span>(Image) <span class="ot">&lt;-</span> Grayscale</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="fu">display</span>(Image)</span></code></pre></div>
+<pre><code>## Only the first frame of the image stack is displayed.
+## To display all frames use &#39;all = TRUE&#39;.</code></pre>
+<p><img src="pembahasan_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(Image)</span></code></pre></div>
+<pre><code>## Image 
+##   colorMode    : Grayscale 
+##   storage.mode : double 
+##   dim          : 1000 1250 3 
+##   frames.total : 3 
+##   frames.render: 3 
+## 
+## imageData(object)[1:5,1:6,1]
+##           [,1]      [,2]      [,3]      [,4]      [,5]      [,6]
+## [1,] 0.8901961 0.8901961 0.8901961 0.8901961 0.8901961 0.8901961
+## [2,] 0.8901961 0.8901961 0.8901961 0.8901961 0.8901961 0.8901961
+## [3,] 0.8901961 0.8901961 0.8901961 0.8901961 0.8901961 0.8901961
+## [4,] 0.8901961 0.8901961 0.8901961 0.8901961 0.8901961 0.8901961
+## [5,] 0.8901961 0.8901961 0.8901961 0.8901961 0.8901961 0.8901961</code></pre>
+</div>
+<div id="berwarna" class="section level3">
+<h3>Berwarna</h3>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colorMode</span>(Image) <span class="ot">&lt;-</span> Color</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="fu">display</span>(Image)</span></code></pre></div>
+<p><img src="pembahasan_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(Image)</span></code></pre></div>
+<pre><code>## Image 
+##   colorMode    : Color 
+##   storage.mode : double 
+##   dim          : 1000 1250 3 
+##   frames.total : 3 
+##   frames.render: 1 
+## 
+## imageData(object)[1:5,1:6,1]
+##           [,1]      [,2]      [,3]      [,4]      [,5]      [,6]
+## [1,] 0.8901961 0.8901961 0.8901961 0.8901961 0.8901961 0.8901961
+## [2,] 0.8901961 0.8901961 0.8901961 0.8901961 0.8901961 0.8901961
+## [3,] 0.8901961 0.8901961 0.8901961 0.8901961 0.8901961 0.8901961
+## [4,] 0.8901961 0.8901961 0.8901961 0.8901961 0.8901961 0.8901961
+## [5,] 0.8901961 0.8901961 0.8901961 0.8901961 0.8901961 0.8901961</code></pre>
+</div>
+</div>
+<div id="filter" class="section level2">
+<h2>Filter</h2>
+</div>
+<div id="section-1" class="section level2 tabset">
+<h2 class="tabset"></h2>
+<div id="low-pass-filter" class="section level3">
+<h3>Low-Pass Filter</h3>
+<p><strong>Low-Pass Filter</strong> berfungsi untuk membuat gambar dikaburkan atau diburamkan</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>fLow <span class="ot">&lt;-</span> <span class="fu">makeBrush</span>(<span class="dv">21</span>, <span class="at">shape=</span> <span class="st">&#39;disc&#39;</span>, <span class="at">step=</span><span class="cn">FALSE</span>)<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>fLow <span class="ot">&lt;-</span> fLow<span class="sc">/</span><span class="fu">sum</span>(fLow)</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>Image.fLow <span class="ot">&lt;-</span> <span class="fu">filter2</span>(Image, fLow)</span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="fu">display</span>(Image.fLow)</span></code></pre></div>
+<p><img src="pembahasan_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
+</div>
+<div id="high-pass-filter" class="section level3">
+<h3>High-Pass Filter</h3>
+<p><strong>High-Pass Filter</strong> berfungsi untuk membuat gambar menjadi menjadi lebih tajam atau mengurangi halus.</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>fHigh <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="dv">1</span>, <span class="at">nc =</span> <span class="dv">3</span>, <span class="at">nr =</span> <span class="dv">3</span>)</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>fHigh[<span class="dv">2</span>, <span class="dv">2</span>] <span class="ot">&lt;-</span> <span class="sc">-</span><span class="dv">8</span></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>Image.fHigh <span class="ot">&lt;-</span> <span class="fu">filter2</span>(Image, fHigh)</span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="fu">display</span>(Image.fHigh)</span></code></pre></div>
+<p><img src="pembahasan_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
+</div>
+<div id="median-filter" class="section level3">
+<h3>Median Filter</h3>
+<p><strong>Median Filter</strong> berfungsi untuk mengurangi bintik (Noise reduction) pada gambar</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>medFltr <span class="ot">&lt;-</span> <span class="fu">medianFilter</span>(Image, <span class="fl">1.1</span>)</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="fu">display</span>(medFltr)</span></code></pre></div>
+<p><img src="pembahasan_files/figure-html/unnamed-chunk-19-1.png" width="672" /></p>
+</div>
+</div>
+</div>
+<div id="daftar-pustaka" class="section level1">
+<h1>Daftar Pustaka</h1>
+<p>● <a href="http://bioconductor.org" class="uri">http://bioconductor.org</a> <br> ● <a href="https://thinkstudioo.blogspot.com/2018/03/analisis-image-menggunakan-ebimage-di-r.html" class="uri">https://thinkstudioo.blogspot.com/2018/03/analisis-image-menggunakan-ebimage-di-r.html</a> <br> ● <a href="https://thinkstudioo.blogspot.com/2018/03/analisis-image-menggunakan-ebimage-di-r_6.html" class="uri">https://thinkstudioo.blogspot.com/2018/03/analisis-image-menggunakan-ebimage-di-r_6.html</a></p>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
